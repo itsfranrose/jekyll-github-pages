@@ -1,6 +1,7 @@
 <footer class="footer">
-    <!-- <p>&copy; {{ site.username }}</p> -->
-    <p>Built with Jekyll and <span class="love">❤</span> by <a href="https://github.com/murraco">Mauricio Urraco</a></p>
+  {% if site.footer_text %}
+	  <p>{{ site.footer_text }}</p>
+  {% endif %}
 </footer>
 <script src="{{ '/assets/js/particles.min.js' | prepend: site.baseurl }}"></script>
 <script src="{{ '/assets/js/sweet-scroll.min.js' | prepend: site.baseurl }}"></script>
