@@ -12,12 +12,14 @@ email: francis.rosinante@gmail.com
 twitter_username: itsfranrose 
 # instagram_username:  
 # facebook_username: mauricio.urraco
-# linkedin_username: murraco
+linkedin_username: mehdi-rafee
 github_username: itsfranrose 
+goodreads_username: itsfranrose
 # medium_username: lorem_ipsum
 # medium_url: lorem_ipsum.medium.com
 # gplus_username:  lorem_ipsum
 footer_text: All people are different people.
+particles: false
 
 exclude: ['package.json', 'src', 'node_modules', 'vendor']
 

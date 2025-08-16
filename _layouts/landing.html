@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="../assets/css/devicon.min.css">
+<html lang="en">
+  {% include head.html %}
+  <body>
+	  {% if site.particles %}
+		  <div id="particles-js"></div>
+	  {% else %}
+		  <div id="solid-bg"></div>
+	  {% endif %}
+	  <main>
+		  {% include header.html %}
+		  <section id="about">
+			  {% include about.html %}
+		  </section>
+			{{ content }}
+	  </main>
+	  {% include footer.html %}
+  </body>
+</html>
