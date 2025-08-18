@@ -1,21 +1,26 @@
 {
-  "name": "jekyll-theme-minimal-resume",
+  "name": "jekyll-github-pages",
   "version": "1.0.0",
-  "description": "This is a simple Jekyll theme for a minimal resume website.",
+  "description": "This is a simple Jekyll theme for a minimal website.",
   "main": "index.js",
   "scripts": {
+    "start": "gulp",
+    "build": "gulp build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Mauricio Urraco <mauriurraco@gmail.com>",
+  "author": "Francis Rosinante <francis.rosinante@gmail.com>",
   "license": "MIT",
-  "dependencies": {
-    "browser-sync": "^3.0.2",
+  "devDependencies": {
+    "axios": "^1.6.0",
+    "browser-sync": "^3.0.4",
+    "fs-extra": "^11.1.1",
     "gulp": "^5.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-csso": "^4.0.1",
-    "gulp-imagemin": "^8.0.0",
+    "gulp-imagemin": "7.1.0",
     "gulp-plumber": "^1.1.0",
     "gulp-sass": "^5.1.0",
-    "gulp-uglify": "^3.0.2"
+    "sass": "^1.70.0",
+    "gulp-terser": "^2.1.0"
   }
 }

@@ -1,0 +1,91 @@
+@import 'normalize'; // fetchNormalize writes _scss/_normalize.scss before build
+
+:root {
+  --color-text: #555;
+  --color-heading: #333;
+  --base-font-size: 100%; // respects user settings; typically 16px
+  --base-line-height: 1.5;
+  --scale-h1: 2.5rem;
+  --scale-h2: 2rem;
+  --scale-h3: 1.5rem;
+  --scale-h4: 1rem;
+}
+
+/* sensible box model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* font smoothing for most platforms */
+html, body {
+  height: 100%;
+  margin: 0;
+  font-size: var(--base-font-size);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* page layout */
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  line-height: var(--base-line-height);
+  color: var(--color-text);
+
+  /* change this to whatever primary typeface your fonts.css provides */
+  font-family: 'Antic Slab', Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  background: transparent;
+}
+
+main {
+  flex: 1;
+}
+
+/* HTML5 elements default display (kept for older UA compatibility) */
+article, aside, figcaption, figure, footer, header, nav, section {
+  display: block;
+}
+
+/* headings */
+h1, h2, h3, h4, strong {
+  margin-top: 1em;
+  padding-top: 1em;
+  line-height: 1.25;
+  color: var(--color-heading);
+  font-weight: 700;
+}
+
+h1 { font-size: var(--scale-h1); }
+h2 { font-size: var(--scale-h2); }
+h3 { font-size: var(--scale-h3); }
+h4 { font-size: var(--scale-h4); }
+
+/* lists */
+ul, ol {
+  margin: 1em 0;
+  padding-left: 2.5rem; /* ~40px at default font size */
+}
+
+/* paragraphs & figures */
+p, figure {
+  margin: 1em 0;
+}
+
+/* images in links and responsive images */
+a img {
+  border: 0; /* older browsers */
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+}
+
+/* superscript / subscript */
+sup, sub {
+  line-height: 0;
+  vertical-align: baseline;
+}
+sup { vertical-align: super; }
+sub { vertical-align: sub; }
