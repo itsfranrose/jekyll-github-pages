@@ -18,5 +18,6 @@ footer:
   quote: 'Never give up without a fight. <span style="color: #9e7b52;">&General Iroh</span>'
 
 particles: true
+theme: jekyll-github-pages
 
 exclude: ['package.json', 'src', 'node_modules', 'vendor']

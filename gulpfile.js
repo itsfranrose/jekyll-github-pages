@@ -1,6 +1,6 @@
 // gulpfile.js (modern Gulp 5, patched)
 // - Downloads vendor JS (once), normalize.css, fonts+CSS (Google Fonts, FontAwesome, Devicon)
-// - SCSS from _scss/, JS from _js/, icons from _icons/, images from _images/
+// - SCSS from _sass/, JS from _js/, icons from _icons/, images from _images/
 const { src, dest, series, parallel, watch } = require('gulp');
 const csso = require('gulp-csso');
 const terser = require('gulp-terser');
@@ -42,7 +42,7 @@ function serve(done) {
 /* -------------------- Fetch Normalize -------------------- */
 async function fetchNormalize() {
   const url = 'https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css';
-  const destPath = '_scss/_normalize.scss';
+  const destPath = '_sass/_normalize.scss';
   try {
     const resp = await axios.get(url, { responseType: 'text' });
     const content = `/* Auto-fetched normalize.css */\n${resp.data}`;
@@ -226,7 +226,7 @@ async function fetchFonts() {
 
 /* -------------------- SCSS -------------------- */
 function styles() {
-  return src('_scss/**/*.scss')
+  return src('_sass/**/*.scss')
     .pipe(plumber())
     .pipe(gulpSass().on('error', gulpSass.logError))
     .pipe(csso())
@@ -295,7 +295,7 @@ const watchOpts = {
 };
 
 function watchFiles() {
-  watch('_scss/**/*.scss', watchOpts, series(styles, jekyllRebuild));
+  watch('_sass/**/*.scss', watchOpts, series(styles, jekyllRebuild));
   watch('_js/**/*.js', watchOpts, series(scripts, jekyllRebuild));
   watch('_images/**/*.{jpg,jpeg,png,gif}', watchOpts, series(images, jekyllRebuild));
   watch('_icons/**/*.{svg,png,ico,webmanifest,json}', watchOpts, series(icons, jekyllRebuild));
