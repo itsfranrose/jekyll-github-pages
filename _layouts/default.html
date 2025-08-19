@@ -2,19 +2,20 @@
 <html lang="en">
   {% include head.html %}
   <body>
-    <!-- particles background (fixed). Will be empty if particles are not initialized -->
-	<!-- <div id="particles-js" aria-hidden="true"></div> -->
-	<div id="solid-bg" aria-hidden="true"></div>
+	  {% if site.particles %}
+		  <div id="particles-js" aria-hidden="true"></div>
+	  {% else %}
+		  <div id="solid-bg" aria-hidden="true"></div>
+	  {% endif %}
 
-    <div class="site-wrapper">
-      {% include header.html %}
-      <main id="main" role="main" class="site-main">
-        {% include about.html %}
-        {{ content }}
-      </main>
-      {% include footer.html %}
-    </div>
-
-    {% include post-scripts.html %}
+	  <div class="site-wrapper">
+		  {% include header.html %}
+		  <main id="main" role="main" class="site-main">
+			{% include about.html %}
+			{{ content }}
+		  </main>
+		  {% include footer.html %}
+	  </div>
+	  {% include post-scripts.html %}
   </body>
 </html>
