@@ -26,7 +26,7 @@ Gem::Specification.new do |spec|
     File.directory?(f) # Exclude directories themselves
   end
 
-  spec.add_runtime_dependency "jekyll", "~> 4.2"
+  spec.add_runtime_dependency "jekyll", "~> 3.9"
   spec.add_development_dependency "bundler", "~> 2.6.9"
   spec.add_development_dependency "rake", "~> 13.3"
 end
