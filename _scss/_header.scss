@@ -1,96 +1,30 @@
+$cut: 720px !default;
+$link-color: #ffffff !default; // link/icon foreground
+$bg-color: transparent !default;
+
+$icon-size-sm: 1.25rem !default;  // ~20px
+$icon-size-lg: 1.875rem !default; // ~30px
+
+/* Canvas / hero wrapper (keeps header vertically centered when used as hero) */
 .canvas {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding: 2rem 1rem; /* breathing room on small screens */
+  background: $bg-color;
+  box-sizing: border-box;
 }
 
+/* Main header block */
 .header {
-  font-family: 'Montserrat', sans-serif;
-  z-index: 1;
-  text-align: center;
-  color:#FFF;
-  position: absolute;
-  top: 15%;
-  left: 50%;
+  font-family: 'Montserrat', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: $link-color;
+  position: relative; /* stays in flow, allows z-indexing */
+  z-index: 1;         /* sits above particle canvas (z-index:0) */
   margin: 0 auto;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  .site-title {
-    font-size: 30px;
-    display: block;
-    line-height: 1;
-    color: #FFF;
-    @media only screen and (min-width:$cut){
-      margin: 0;
-      font-size: 30px;
-    }
-  }
-  .site-description {
-    font-size: 25px;
-    display: block;
-    line-height: 1;
-    color: #FFF;
-    margin-top: 10px;
-    @media only screen and (min-width:$cut){
-      font-size: 25px;
-    }
-  }
-}
-
-.header-links {
-  margin: 10px;
-  .link {
-    color: #FFF;
-    text-decoration: none;
-    font-size: 15px;
-    margin: 10px;
-    @media only screen and (min-width:$cut){
-      font-size: 20px;
-    }
-  }
-}
-
-.header-icons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  text-align: center;
-  a {
-    // no borders
-    outline: 0 !important;
-    border: none !important;
-    outline-style: none !important;
-    -moz-outline-style: none !important;
-
-    padding: none;
-    margin: none;
-  }
-  .icon {
-    text-align: center;
-    color: #FFF;
-    width: 20px;
-    height: 20px;
-    font-size: 20px;
-    padding: 10px;
-    margin: 5px;
-    transition: all .5s;
-    &:hover {
-      color: $main;
-      background: #FFF;
-    }
-    &:active {
-      color: $main;
-      background: #FFF;
-    }
-    @media only screen and (min-width:$cut) {
-      width: 30px;
-      height: 30px;
-      font-size: 30px;
-      line-height: 30px;
-    }
-  }
+  max-width: 900px;
+  width: 100%;
+  padding: 0.5rem 1rem;
 }

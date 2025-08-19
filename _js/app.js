@@ -1,119 +1,66 @@
-/* sweetScroll load */
+/* app.js: safe init for SweetScroll and particles (vendor scripts are local assets) */
 document.addEventListener("DOMContentLoaded", function () {
-  const sweetScroll = new SweetScroll({/* some options */});
-
-  /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
-  if (document.getElementById('particles-js')) {
-	  particlesJS('particles-js', {
-		"particles": {
-		  "number": {
-			"value": 10,
-			"density": {
-			  "enable": true,
-			  "value_area": 500 
-			}
-		  },
-		  "color": {
-			"value": "#a6a6a6"
-		  },
-		  "shape": {
-			"type": "circle",
-			"stroke": {
-			  "width": 0,
-			  "color": "#000000"
-			},
-			"polygon": {
-			  "nb_sides": 5
-			},
-			"image": {
-			  "src": "img/github.svg",
-			  "width": 100,
-			  "height": 100
-			}
-		  },
-		  "opacity": {
-			"value": 1,
-			"random": true,
-			"anim": {
-			  "enable": true,
-			  "speed": 1,
-			  "opacity_min": 0,
-			  "sync": false
-			}
-		  },
-		  "size": {
-			"value": 3,
-			"random": true,
-			"anim": {
-			  "enable": false,
-			  "speed": 4,
-			  "size_min": 0.3,
-			  "sync": false
-			}
-		  },
-		  "line_linked": {
-			"enable": false,
-			"distance": 150,
-			"color": "#ffffff",
-			"opacity": 0.4,
-			"width": 1
-		  },
-		  "move": {
-			"enable": true,
-			"speed": 1,
-			"direction": "none",
-			"random": true,
-			"straight": false,
-			"out_mode": "out",
-			"bounce": false,
-			"attract": {
-			  "enable": false,
-			  "rotateX": 600,
-			  "rotateY": 600
-			}
-		  }
-		},
-		"interactivity": {
-		  "detect_on": "canvas",
-		  "events": {
-			"onhover": {
-			  "enable": false,
-			  "mode": "bubble"
-			},
-			"onclick": {
-			  "enable": false,
-			  "mode": "repulse"
-			},
-			"resize": true
-		  },
-		  "modes": {
-			"grab": {
-			  "distance": 400,
-			  "line_linked": {
-				"opacity": 1
-			  }
-			},
-			"bubble": {
-			  "distance": 250,
-			  "size": 0,
-			  "duration": 2,
-			  "opacity": 0,
-			  "speed": 3
-			},
-			"repulse": {
-			  "distance": 400,
-			  "duration": 0.4
-			},
-			"push": {
-			  "particles_nb": 4
-			},
-			"remove": {
-			  "particles_nb": 2
-			}
-		  }
-		},
-		"retina_detect": true
-	  });
+  // SweetScroll init (if available)
+  if (typeof SweetScroll !== 'undefined') {
+    try {
+      /* eslint-disable no-unused-vars */
+      const sweetScroll = new SweetScroll({/* some options */});
+      /* eslint-enable no-unused-vars */
+    } catch (e) {
+      console.warn('SweetScroll init failed:', e);
+    }
+  } else {
+    // console.info('SweetScroll not available');
   }
 
+  function initParticlesAdaptive() {
+    // Device/viewport heuristics
+    const DPR = Math.max(1, Math.min(2, window.devicePixelRatio || 1)); // cap at 2 for safety
+    const area = window.innerWidth * window.innerHeight;
+    // rough particle base scaled by area (tweak constants to taste)
+    let base = Math.round(Math.max(12, Math.min(160, area / 15000)));
+    // reduce on high DPR and low CPU core counts
+    if (DPR > 1.5) base = Math.round(base / DPR);
+    if (navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 2) base = Math.round(base * 0.6);
+    base = Math.max(10, Math.min(160, base));
+  
+    // Performance-oriented config
+    const cfg = {
+      particles: {
+        number: { value: base, density: { enable: false } }, // use fixed count (no density)
+        color: { value: "#ffffff" },
+        shape: { type: "circle" },
+        opacity: { value: 0.45, random: false }, // no per-particle opacity randomness
+        size: { value: 1.2, random: true },
+        line_linked: { enable: false },
+        move: {
+          enable: true,
+          speed: 0.6,
+          direction: "none",
+          random: true,
+          straight: false,
+          out_mode: "out"
+        }
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: { onhover: { enable: false }, onclick: { enable: false }, resize: false },
+        modes: {}
+      },
+      retina_detect: false // IMPORTANT: prevents expensive backing-store scaling
+    };
+  
+    // Destroy previous instance if present
+    try {
+      if (window.pJSDom && window.pJSDom.length) {
+        window.pJSDom.forEach(d => d && d.pJS && d.pJS.fn && d.pJS.fn.vendors && d.pJS.fn.vendors.destroypJS && d.pJS.fn.vendors.destroypJS());
+        window.pJSDom = [];
+      }
+    } catch (e) { /* ignore */ }
+  
+    particlesJS('particles-js', cfg);
+  }
+  
+  // init now
+  initParticlesAdaptive();
 }, false);

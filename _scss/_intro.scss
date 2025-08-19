@@ -1,0 +1,87 @@
+$user-username-color: #fff6e8;
+$user-name-color: #d1ebd4;
+$user-title-color: #eac7ff;
+$user-short-description-color: #6ad4a8;
+$user-description-color: #e3a36f;
+
+/* Main header block */
+.intro {
+  font-family: Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #FFF;
+  position: relative; /* stays in flow, allows z-indexing */
+  z-index: 1;         /* sits above particle canvas (z-index:0) */
+  max-width: 900px;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  white-space: nowrap;
+  margin-top: 5rem;
+
+  /* Title & description */
+  .user-username {
+    font-family: 'Amarante';
+    display: inline-block;
+    line-height: 1.05;
+    font-weight: 700;
+    color: $user-username-color;
+    font-size: clamp(1.0rem, 1.0vw + 2.9rem, 4.5rem);
+
+    &::before {
+      content: attr(data-name); /* invisible spacer */
+      visibility: hidden;
+      white-space: nowrap;
+      /* match typography of the visible name so widths match */
+      font-family: 'Averia Serif Libre';
+      font-weight: 700;
+      line-height: 1.05;
+      font-size: clamp(0.1rem, 0.1vw + 1.0rem, 2.0rem);
+      margin-right: 0.3rem;
+      display: inline-block;
+    }
+  }
+
+  .user-name {
+    font-family: 'Averia Serif Libre';
+    line-height: 1.05;
+    font-weight: 700;
+    display: inline-block;
+    color: $user-name-color;
+    /* fluid size: min 1.5rem, preferred with viewport, max 2.6rem */
+    font-size: clamp(0.1rem, 0.1vw + 1.0rem, 2.0rem);
+    /* small vertical tweak if you want it raised/lowered: */
+    transform: translateX(0.3rem) translateY(0.35rem);
+    vertical-align: baseline;        /* or text-top/text-bottom */
+  }
+
+  .user-title {
+    font-family: 'Caesar Dressing';
+    display: block;
+    margin: 0.5rem 0 0;
+    line-height: 1.15;
+    font-weight: 400;
+    color: $user-title-color;
+    font-size: clamp(0.1rem, 0.6vw + 0.8rem, 1.5rem);
+  }
+
+  .user-short-description {
+    font-family: 'Barriecito';
+    display: block;
+    margin: 1.9rem 0 0;
+    line-height: 1.15;
+    font-weight: 400;
+    color: $user-short-description-color;
+    font-size: clamp(1rem, 1.6vw + 0.8rem, 1.5rem);
+  }
+}
+
+.user-description {
+  font-family: 'Roboto Mono', 'Ubuntu Mono';
+  max-width: 650px;       // limits line length for readability
+  display: block;
+  margin: 3rem auto 0;    // centers content below header
+  line-height: 2.0;       // more comfortable for long text
+  font-weight: 400;
+  font-size: clamp(0.9rem, 1.2vw + 0.8rem, 1.2rem);
+  text-align: justify !important;
+  color: $user-description-color;
+}

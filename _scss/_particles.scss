@@ -1,13 +1,18 @@
+/* particles background: fixed full-bleed, sits behind content */
 #particles-js {
   position: fixed;
-  top: 0;
-  left: 0;
+  inset: 0; /* top/right/bottom/left:0 */
   width: 100%;
   height: 100%;
-  z-index: -1;
+  z-index: 0; /* background layer */
+  pointer-events: none; /* allow clicks through */
 
+  /* fallback background color (var from _vars.scss or _base) */
   background: $main;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
+
+  /* improve painting isolation */
+  contain: paint;       /* isolates painting to this element in supporting browsers */
+  -webkit-transform: translateZ(0); /* hint to compositor (may help in some UAs) */
 }

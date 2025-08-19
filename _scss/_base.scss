@@ -19,6 +19,7 @@
 /* font smoothing for most platforms */
 html, body {
   height: 100%;
+  min-height: 100vh;
   margin: 0;
   font-size: var(--base-font-size);
   -webkit-font-smoothing: antialiased;
@@ -42,7 +43,8 @@ body {
 
 main {
   flex: 1;
-}
+
+  flex: 1;}
 
 /* HTML5 elements default display (kept for older UA compatibility) */
 article, aside, figcaption, figure, footer, header, nav, section {
@@ -89,3 +91,16 @@ sup, sub {
 }
 sup { vertical-align: super; }
 sub { vertical-align: sub; }
+
+
+/* ensure content sits above background particles */
+.site-wrapper {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.site-main {
+  flex: 1 0 auto;
+}

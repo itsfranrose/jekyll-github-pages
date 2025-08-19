@@ -1,25 +1,22 @@
-# Site settings
-title: Francis Rosinante
-description: Jekyll Theme Minimal Resume
-# baseurl: "" # the subpath of your site, e.g. /blog
-# url: "localhost:3000" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
+meta:
+  title: franrose 
+  description: Dynamic and customizable jekyll theme
 
-# User settings
-username: Francis Rosinante 
-user_description: curious, enthusiastic, and adventurous
-user_title: programmer
-email: francis.rosinante@gmail.com
-twitter_username: itsfranrose 
-# instagram_username:  
-# facebook_username: mauricio.urraco
-linkedin_username: mehdi-rafee
-github_username: itsfranrose 
-goodreads_username: itsfranrose
-# medium_username: lorem_ipsum
-# medium_url: lorem_ipsum.medium.com
-# gplus_username:  lorem_ipsum
-footer_text: All people are different people.
-particles: false
+user:
+  username: '<span style="color: #e9a467;">f</span>ran<span style="color: #de7873;">r</span>ose'
+  name: Mehdi Rafee
+  short-description: '<span style="color: #d1443d;">enthusiastic</span> • <span style="color: #e38b3d;">adventurous</span>'
+  title: programmer
+  description: >
+    Hi there, I'm a progammer based in Isfahan, Iran; passionate about
+    open-source software, systems programming, and tooling & tinkering.
+    Currently I'm working on my personal development ecosystem,
+    and brushing up on my web development skills.
+    <br>Anyhow, let's get going with the professional button-pressing, shall we?
+
+footer:
+  quote: 'Never give up without a fight. <span style="color: #9e7b52;">&General Iroh</span>'
+
+particles: true
 
 exclude: ['package.json', 'src', 'node_modules', 'vendor']
-

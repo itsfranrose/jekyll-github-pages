@@ -1,21 +1,16 @@
 .footer {
-  background: $main;
-  padding: 10px 0;
-  margin-top: 100px;
+  z-index: 1;
+  padding: 5px 0;
+  margin-top: 0;
   text-align: center;
   color: #FFF;
-  .love {
-    color: red;
-  }
-  a {
-    text-decoration: none;
-    margin: 0;
-    color: #FFF;
-    &:hover{
-      color: $sec;
-    }
-    &:active {
-      color: $sec;
-    }
+
+  .footer-quote {
+    font-family: 'Ubuntu Mono';
+    display: block;
+    line-height: 1.15;
+    font-weight: 400;
+    color: inherit;
+    font-size: clamp(0.1rem, 0.5vw + 0.4rem, 1.5rem);
   }
 }

@@ -2,12 +2,19 @@
 <html lang="en">
   {% include head.html %}
   <body>
+    <!-- particles background (fixed). Will be empty if particles are not initialized -->
+	<!-- <div id="particles-js" aria-hidden="true"></div> -->
+	<div id="solid-bg" aria-hidden="true"></div>
+
+    <div class="site-wrapper">
       {% include header.html %}
-      <section id="about">
-		  {% include about.html %}
-      </section>
+      <main id="main" role="main" class="site-main">
+        {% include about.html %}
         {{ content }}
+      </main>
       {% include footer.html %}
-	  {% include post-scripts.html %}
+    </div>
+
+    {% include post-scripts.html %}
   </body>
 </html>
