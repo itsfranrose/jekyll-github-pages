@@ -5,8 +5,11 @@
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.meta.title }}{% endif %}</title>
   <meta name="description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.meta.description }}{% endif %}">
 
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/icons/favicon_io/apple-touch-icon.png' | relative_url }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/icons/favicon_io/favicon-32x32.png' | relative_url }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/icons/favicon_io/favicon-16x16.png' | relative_url }}">
+  <link rel="manifest" href="{{ '/assets/icons/favicon_io/site.webmanifest' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
-  <link rel="shortcut icon" type="image/png" href="{{ '/assets/icons/favicon.png' }}" >
   {% include fonts.html %}
   {% include vendor-scripts.html %}
 </head>

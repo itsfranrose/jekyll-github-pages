@@ -1,0 +1,106 @@
+@font-face {
+  font-family: 'Alegreya SC';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/taiOGmRtCJ62-O0HhNEa-a6o.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'Amarante';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/xMQXuF1KTa6EvGx9bq-3.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'Averia Serif Libre';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/neIWzD2ms4wxr6GvjeD0X88SHPyX2xY-pQ.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'Bahianita';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/yYLr0hTb3vuqqsBUgxWtxQ.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'Barriecito';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/WWXXlj-CbBOSLY2QTuY_KdU.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'Barrio';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/wEO8EBXBk8hBIDiEdQ.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'Bigelow Rules';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/RrQWboly8iR_I3KWSzeRuN0zT4c.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'Bigshot One';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/u-470qukhRkkO6BD_7cM_gxu.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'Caesar Dressing';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/yYLx0hLa3vawqtwdswbotmK4vrR3cQ.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'Grenze Gotisch';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Fh4hPjjqNDz1osh_jX9YfjudpBJBNV5y5wf_k1i5Lz9UcA.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'Megrim';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/46kulbz5WjvLqJZlbQ.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'Metal Mania';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/RWmMoKWb4e8kqMfBUdPFJeXC.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+  font-display: swap;
+  src: url("/assets/fonts/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWubEbWmT.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/L0xuDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_3vqPQw.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'Ubuntu Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/KFOjCneDtsqEr0keqCMhbBc9.ttf") format('truetype');
+}

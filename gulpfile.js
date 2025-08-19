@@ -265,11 +265,24 @@ function images() {
 }
 
 /* -------------------- Icons -------------------- */
-function icons() {
-  const iconDir = '_icons';
-  if (!fs.existsSync(iconDir) || fs.readdirSync(iconDir).length === 0) return Promise.resolve();
-  return src('_icons/**/*.{svg,png}')
-    .pipe(dest('assets/icons/'));
+async function icons() {
+  const srcDir = '_icons';
+  const outDir = path.join('assets', 'icons');
+
+  if (!fs.existsSync(srcDir)) return;
+
+  await fsExtra.ensureDir(outDir);
+  await fsExtra.copy(srcDir, outDir, {
+    overwrite: true,
+    filter: (src) => {
+      // allow directories (so recursion works)
+      if (fs.lstatSync(src).isDirectory()) return true;
+      // only copy specific file types
+      return /\.(png|svg|ico|webmanifest|json)$/i.test(src);
+    }
+  });
+
+  console.log('Copied icons recursively via fs-extra.copy');
 }
 
 /* -------------------- Watch -------------------- */
@@ -285,7 +298,7 @@ function watchFiles() {
   watch('_scss/**/*.scss', watchOpts, series(styles, jekyllRebuild));
   watch('_js/**/*.js', watchOpts, series(scripts, jekyllRebuild));
   watch('_images/**/*.{jpg,jpeg,png,gif}', watchOpts, series(images, jekyllRebuild));
-  watch('_icons/**/*.{svg,png}', watchOpts, series(icons, jekyllRebuild));
+  watch('_icons/**/*.{svg,png,ico,webmanifest,json}', watchOpts, series(icons, jekyllRebuild));
   watch(['*.html', '_includes/*.html', '_layouts/*.html'], watchOpts, jekyllRebuild);
 }
 
