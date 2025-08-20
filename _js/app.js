@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (DPR > 1.5) base = Math.round(base / DPR);
     if (navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 2) base = Math.round(base * 0.6);
     base = Math.max(10, Math.min(160, base));
+	base = Math.floor(1.5 * base);
   
     // Performance-oriented config
     const cfg = {
@@ -31,10 +32,10 @@ document.addEventListener("DOMContentLoaded", function () {
         color: { value: "#ffffff" },
         shape: { type: "circle" },
         opacity: { value: 0.45, random: false }, // no per-particle opacity randomness
-        size: { value: 1.2, random: true },
+        size: { value: 1.4, random: true },
         line_linked: { enable: false },
         move: {
-          enable: true,
+          enable: false,
           speed: 0.6,
           direction: "none",
           random: true,
