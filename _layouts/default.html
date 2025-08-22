@@ -2,16 +2,10 @@
 <html lang="en">
   {% include head.html %}
   <body>
-	  {% if site.particles %}
-		  <div id="particles-js" aria-hidden="true"></div>
-	  {% else %}
-		  <div id="solid-bg" aria-hidden="true"></div>
-	  {% endif %}
-
+	  <div id="solid-bg" aria-hidden="true"></div>
 	  <div class="site-wrapper">
 		  {% include header.html %}
 		  <main id="main" role="main" class="site-main">
-			{% include about.html %}
 			{{ content }}
 		  </main>
 		  {% include footer.html %}

@@ -1,6 +1,7 @@
 <h1 class="intro">
-	<span class="user-username" data-name="{{ site.user.name }}">{{ site.user.username }}</span>
-	<span class="user-name">{{ site.user.name }}</span>
+	<span class="user-username-prefix" data-postfix="{{ site.user.name }}">{{ site.user.username-prefix }}</span>
+	<span class="user-username">{{ site.user.username }}</span>
+	<span class="user-name" data-prefix="{{ site.user.username-prefix }}">{{ site.user.name }}</span>
 	<span class="user-title">{{ site.user.title }}</span>
 	<span class="user-short-description">{{ site.user.short-description }}</span>
 </h1>

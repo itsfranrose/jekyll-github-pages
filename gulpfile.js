@@ -68,7 +68,6 @@ async function generateVendorIncludes() {
   await fsExtra.ensureDir(vendorDir);
 
   const vendors = [
-    { url: 'https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.js', filename: 'particles.js' },
     { url: 'https://cdn.jsdelivr.net/npm/sweet-scroll@4.0.0/sweet-scroll.min.js', filename: 'sweet-scroll.min.js' }
   ];
 
@@ -300,6 +299,7 @@ function watchFiles() {
   watch('_images/**/*.{jpg,jpeg,png,gif}', watchOpts, series(images, jekyllRebuild));
   watch('_icons/**/*.{svg,png,ico,webmanifest,json}', watchOpts, series(icons, jekyllRebuild));
   watch(['*.html', '_includes/*.html', '_layouts/*.html'], watchOpts, jekyllRebuild);
+  watch('_config.yml', watchOpts, jekyllRebuild);
 }
 
 /* -------------------- Build / Default -------------------- */

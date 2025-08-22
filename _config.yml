@@ -3,7 +3,8 @@ meta:
   description: Dynamic and customizable jekyll theme
 
 user:
-  username: '<span style="color: #e9a467;">f</span>ran<span style="color: #de7873;">r</span>ose'
+  username-prefix: its
+  username: '<span style="color: #4c6349;">f</span>ran<span style="color: #4c6349;">r</span>ose'
   name: Mehdi Rafee
   short-description: '<span style="color: #d1443d;">enthusiastic</span> • <span style="color: #e38b3d;">adventurous</span>'
   title: programmer
@@ -15,9 +16,6 @@ user:
     <br>Anyhow, let's get going with the professional button-pressing, shall we?
 
 footer:
-  quote: 'Never give up without a fight. <span style="color: #9e7b52;">&General Iroh</span>'
+  quote: 'Never give up without a fight. <span style="color: #857676;">&General Iroh</span>'
 
-particles: true
 theme: jekyll-github-pages
-
-exclude: ['package.json', 'src', 'node_modules', 'vendor']

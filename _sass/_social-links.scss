@@ -22,32 +22,32 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    color: $link-color;
-    width: $icon-size-sm;
-    height: $icon-size-sm;
-    font-size: $icon-size-sm;
-    padding: 0.5rem;   /* creates a comfortable touch target */
-    margin: 0.25rem;
-    border-radius: 50%;
+    color: $color-link;
+    width: $size-icon-small;
+    height: $size-icon-small;
+    font-size: $size-icon-small;
+    padding: 1.15rem;   /* creates a comfortable touch target */
+    margin: 0.1rem;
+    border-radius: 0%;
     background: transparent;
     transition: color 180ms ease, background-color 180ms ease, transform 120ms ease;
     line-height: 1;
 
     &:hover,
     &:focus {
-      color: $main;
-      background: #fff;
-      transform: translateY(-3px);
+      color: #fff;
+      background: $color-main;
+      transform: translateY(-3px) scale(1.05);
     }
 
     &:active {
       transform: translateY(-1px) scale(0.99);
     }
 
-    @media (min-width: #{$cut}) {
-      width: $icon-size-lg;
-      height: $icon-size-lg;
-      font-size: $icon-size-lg;
+    @media (min-width: #{$size-cut}) {
+      width: $size-icon-large;
+      height: $size-icon-large;
+      font-size: $size-icon-large;
     }
   }
 }

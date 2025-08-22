@@ -1,10 +1,3 @@
-$cut: 720px !default;
-$link-color: #ffffff !default; // link/icon foreground
-$bg-color: transparent !default;
-
-$icon-size-sm: 1.25rem !default;  // ~20px
-$icon-size-lg: 1.875rem !default; // ~30px
-
 /* Canvas / hero wrapper (keeps header vertically centered when used as hero) */
 .canvas {
   display: flex;
@@ -13,14 +6,13 @@ $icon-size-lg: 1.875rem !default; // ~30px
   align-items: center;
   text-align: center;
   padding: 2rem 1rem; /* breathing room on small screens */
-  background: $bg-color;
+  background: transparent;
   box-sizing: border-box;
 }
 
 /* Main header block */
 .header {
   font-family: 'Montserrat', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  color: $link-color;
   position: relative; /* stays in flow, allows z-indexing */
   z-index: 1;         /* sits above particle canvas (z-index:0) */
   margin: 0 auto;

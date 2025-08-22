@@ -1,8 +1,16 @@
-$user-username-color: #fff6e8;
-$user-name-color: #d1ebd4;
-$user-title-color: #eac7ff;
-$user-short-description-color: #6ad4a8;
-$user-description-color: #e3a36f;
+$color-user-username-prefix: #949494;
+$color-user-username: #fff;
+$color-user-name: #949494;
+$color-user-title: #668062;
+$color-user-short-description: #668062;
+$color-user-description: #b0a590;
+
+$size-user-username-prefix: clamp(0.1rem, 0.1vw + 1.0rem, 2.0rem);
+$size-user-username: clamp(1.0rem, 1.0vw + 2.9rem, 4.5rem);
+$size-user-name: clamp(0.1rem, 0.1vw + 1.0rem, 2.0rem);
+$size-user-title: clamp(0.1rem, 0.6vw + 0.8rem, 1.5rem);
+$size-user-short-description: clamp(1rem, 1.6vw + 0.8rem, 1.5rem);
+$size-user-description: clamp(0.9rem, 1.2vw + 0.8rem, 1.2rem);
 
 /* Main header block */
 .intro {
@@ -17,27 +25,39 @@ $user-description-color: #e3a36f;
   white-space: nowrap;
   margin-top: 5rem;
 
-  /* Title & description */
-  .user-username {
-    font-family: 'Amarante';
-    display: inline-block;
+  .user-username-prefix {
+    font-family: 'Averia Serif Libre';
     line-height: 1.05;
     font-weight: 700;
-    color: $user-username-color;
-    font-size: clamp(1.0rem, 1.0vw + 2.9rem, 4.5rem);
+    display: inline-block;
+    color: $color-user-username-prefix;
+    /* fluid size: min 1.5rem, preferred with viewport, max 2.6rem */
+    font-size: $size-user-username-prefix;
+    /* small vertical tweak if you want it raised/lowered: */
+    transform: translateY(0.35rem);
+    vertical-align: baseline;        /* or text-top/text-bottom */
 
     &::before {
-      content: attr(data-name); /* invisible spacer */
+      content: attr(data-postfix); /* invisible spacer */
       visibility: hidden;
       white-space: nowrap;
       /* match typography of the visible name so widths match */
       font-family: 'Averia Serif Libre';
       font-weight: 700;
       line-height: 1.05;
-      font-size: clamp(0.1rem, 0.1vw + 1.0rem, 2.0rem);
+      font-size: $size-user-name;
       margin-right: 0.3rem;
       display: inline-block;
     }
+  }
+
+  .user-username {
+    font-family: 'Amarante';
+    display: inline-block;
+    line-height: 1.05;
+    font-weight: 700;
+    color: $color-user-username;
+    font-size: $size-user-username;
   }
 
   .user-name {
@@ -45,12 +65,25 @@ $user-description-color: #e3a36f;
     line-height: 1.05;
     font-weight: 700;
     display: inline-block;
-    color: $user-name-color;
+    color: $color-user-name;
     /* fluid size: min 1.5rem, preferred with viewport, max 2.6rem */
-    font-size: clamp(0.1rem, 0.1vw + 1.0rem, 2.0rem);
+    font-size: $size-user-name;
     /* small vertical tweak if you want it raised/lowered: */
-    transform: translateX(0.3rem) translateY(0.35rem);
+    transform: translateY(0.35rem);
     vertical-align: baseline;        /* or text-top/text-bottom */
+
+    &::after {
+      content: attr(data-prefix); /* invisible spacer */
+      visibility: hidden;
+      white-space: nowrap;
+      /* match typography of the visible name so widths match */
+      font-family: 'Averia Serif Libre';
+      font-weight: 700;
+      line-height: 1.05;
+      font-size: $size-user-username-prefix;
+      margin-left: 0.3rem;
+      display: inline-block;
+    }
   }
 
   .user-title {
@@ -59,8 +92,8 @@ $user-description-color: #e3a36f;
     margin: 0.5rem 0 0;
     line-height: 1.15;
     font-weight: 400;
-    color: $user-title-color;
-    font-size: clamp(0.1rem, 0.6vw + 0.8rem, 1.5rem);
+    color: $color-user-title;
+    font-size: $size-user-title;
   }
 
   .user-short-description {
@@ -69,8 +102,8 @@ $user-description-color: #e3a36f;
     margin: 1.9rem 0 0;
     line-height: 1.15;
     font-weight: 400;
-    color: $user-short-description-color;
-    font-size: clamp(1rem, 1.6vw + 0.8rem, 1.5rem);
+    color: $color-user-short-description;
+    font-size: $size-user-short-description;
   }
 }
 
@@ -81,7 +114,7 @@ $user-description-color: #e3a36f;
   margin: 3rem auto 0;    // centers content below header
   line-height: 2.0;       // more comfortable for long text
   font-weight: 400;
-  font-size: clamp(0.9rem, 1.2vw + 0.8rem, 1.2rem);
+  font-size: $size-user-description;
   text-align: justify !important;
-  color: $user-description-color;
+  color: $color-user-description;
 }
