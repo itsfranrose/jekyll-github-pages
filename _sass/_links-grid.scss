@@ -1,0 +1,50 @@
+.links-grid {
+  display: grid;
+  transform: translateX(1.1rem);
+  margin-top: 1rem;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(2, minmax(120px, 1fr));
+  gap: 1rem 2rem; /* vertical and horizontal spacing */
+
+  .link-item {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: color 0.2s, transform 0.2s;
+
+    i {
+      margin-right: 0.6rem;
+      color: $color-icon;
+      width: $size-icon-small;
+      height: $size-icon-small;
+      border-radius: 0%;
+      background: transparent;
+      transition: color 180ms ease, background-color 180ms ease, transform 120ms ease;
+      line-height: 1;
+
+      font-size: $size-icon-small;
+      @media (min-width: #{$size-cut}) {
+        width: $size-icon-large;
+        height: $size-icon-large;
+        font-size: $size-icon-large;
+      }
+    }
+
+    &:hover i,
+    &:focus i {
+      transform: translateY(-3px) scale(1.05);
+    }
+
+    &:active i {
+      transform: translateY(-1px) scale(0.99);
+    }
+
+    .label {
+      font-size: $size-icon-text;
+      color: $color-icon;
+      font-family: "Grenze Gotisch";
+      display: inline-flex;
+    }
+  }
+}

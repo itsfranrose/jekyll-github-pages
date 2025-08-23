@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+	{% include head.html %}
+	<body>
+		<div id="solid-bg" aria-hidden="true"></div>
+		{% include sidebar.html internal-links=site.data.internal-links links=site.data.social-links %}
+		<div class="site-wrapper">
+			<div class="canvas">
+				<div class="header">
+					<a href="{{ '/' | relative_url }}" class="home-button"><i class="fa-solid fa-home"></i></a>
+				</div>
+				{% include about.html %}
+			</div>
+			<main id="main" role="main" class="site-main"></main>{% include footer.html %}
+		</div>
+		{% include post-scripts.html %}
+	</body>
+</html>

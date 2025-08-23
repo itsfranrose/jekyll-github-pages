@@ -1,0 +1,16 @@
+- url: "/about/"
+  internal: true
+  icon: "fa fa-info-circle"
+  label: "about"
+- url: "/skills/"
+  internal: true
+  icon: "fa fa-tools"
+  label: "skills"
+- url: "/pde/"
+  internal: true
+  icon: "fa fa-terminal"
+  label: "dev-env"
+- url: "/blog/"
+  internal: true
+  icon: "fas fa-blog"
+  label: "blog"

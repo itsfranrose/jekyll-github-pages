@@ -8,6 +8,8 @@ user:
   name: Mehdi Rafee
   short-description: '<span style="color: #d1443d;">enthusiastic</span> • <span style="color: #e38b3d;">adventurous</span>'
   title: programmer
+
+about:
   description: >
     Hi there, I'm a progammer based in Isfahan, Iran; passionate about
     open-source software, systems programming, and tooling & tinkering.

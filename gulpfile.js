@@ -132,9 +132,9 @@ async function fetchFonts() {
     },
     {
       name: 'fontawesome',
-      cssUrl: 'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css',
+      cssUrl: 'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.0.0/css/all.min.css',
       cssOut: path.join(FONT_CSS_DIR, 'fontawesome.css'),
-      baseUrl: 'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/'
+      baseUrl: 'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.0.0/'
     },
     {
       name: 'devicon',
@@ -300,6 +300,7 @@ function watchFiles() {
   watch('_icons/**/*.{svg,png,ico,webmanifest,json}', watchOpts, series(icons, jekyllRebuild));
   watch(['*.html', '_includes/*.html', '_layouts/*.html'], watchOpts, jekyllRebuild);
   watch('_config.yml', watchOpts, jekyllRebuild);
+  watch('_data/**/*.yml', watchOpts, jekyllRebuild);
 }
 
 /* -------------------- Build / Default -------------------- */

@@ -1,0 +1,12 @@
+<div class="links-line">
+	{% assign links = include.links %}
+    {% for item in links %}
+	<a
+		aria-label="{{ item.label }}"
+		{% unless item.internal %}target="_blank" rel="noopener"{% endunless %}
+		href="{% if item.internal %}{{ item.url | relative_url }}{% else %}{{ item.url }}{% endif %}"
+	>
+		<i class="icon {{ item.icon }}" aria-hidden="true"></i>
+	</a>
+    {% endfor %}
+</div>

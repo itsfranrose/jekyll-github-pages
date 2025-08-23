@@ -1,0 +1,22 @@
+$size-icon-extreme: 8rem;
+
+.under-construction {
+  margin-top: 13rem;
+
+  i {
+    color: $color-icon;
+    width: $size-icon-extreme;
+    height: $size-icon-extreme;
+    background: transparent;
+    font-size: $size-icon-extreme;
+
+  }
+
+  .description {
+    color: $color-icon;
+    margin-top: 3rem;
+    font-size: 2.6rem;
+    font-family: "Averia Serif Libre";
+    display: flex;
+  }
+}

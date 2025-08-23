@@ -1,16 +1,14 @@
 $color-user-username-prefix: #949494;
 $color-user-username: #fff;
 $color-user-name: #949494;
-$color-user-title: #668062;
-$color-user-short-description: #668062;
-$color-user-description: #b0a590;
+$color-user-title: $color-sec;
+$color-user-short-description: $color-sec;
 
 $size-user-username-prefix: clamp(0.1rem, 0.1vw + 1.0rem, 2.0rem);
 $size-user-username: clamp(1.0rem, 1.0vw + 2.9rem, 4.5rem);
 $size-user-name: clamp(0.1rem, 0.1vw + 1.0rem, 2.0rem);
 $size-user-title: clamp(0.1rem, 0.6vw + 0.8rem, 1.5rem);
 $size-user-short-description: clamp(1rem, 1.6vw + 0.8rem, 1.5rem);
-$size-user-description: clamp(0.9rem, 1.2vw + 0.8rem, 1.2rem);
 
 /* Main header block */
 .intro {
@@ -23,7 +21,7 @@ $size-user-description: clamp(0.9rem, 1.2vw + 0.8rem, 1.2rem);
   padding: 0.5rem 1rem;
   text-align: center;
   white-space: nowrap;
-  margin-top: 5rem;
+  margin-top: 7rem;
 
   .user-username-prefix {
     font-family: 'Averia Serif Libre';
@@ -105,16 +103,4 @@ $size-user-description: clamp(0.9rem, 1.2vw + 0.8rem, 1.2rem);
     color: $color-user-short-description;
     font-size: $size-user-short-description;
   }
-}
-
-.user-description {
-  font-family: 'Roboto Mono', 'Ubuntu Mono';
-  max-width: 650px;       // limits line length for readability
-  display: block;
-  margin: 3rem auto 0;    // centers content below header
-  line-height: 2.0;       // more comfortable for long text
-  font-weight: 400;
-  font-size: $size-user-description;
-  text-align: justify !important;
-  color: $color-user-description;
 }

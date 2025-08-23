@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-  {% include head.html %}
-  <body>
-	  <div id="solid-bg" aria-hidden="true"></div>
-	  <div class="site-wrapper">
-		  {% include header.html %}
-		  <main id="main" role="main" class="site-main">
-			{{ content }}
-		  </main>
-		  {% include footer.html %}
-	  </div>
-	  {% include post-scripts.html %}
-  </body>
+	{% include head.html %}
+	<body>
+		<div id="solid-bg" aria-hidden="true"></div>
+		<div class="site-wrapper">
+			<div class="canvas">
+				<div class="header">
+				</div>
+				{% include intro.html %}
+				<div style="color: #fff; visibility: hidden;">.</div>
+				<div style="color: #fff; visibility: hidden;">.</div>
+				{% include links-grid.html links=site.data.internal-links %}
+			</div>
+			<main id="main" role="main" class="site-main"></main>
+			{% include links-line.html links=site.data.social-links %}
+			{% include footer.html %}
+		</div>
+		{% include post-scripts.html %}
+	</body>
 </html>

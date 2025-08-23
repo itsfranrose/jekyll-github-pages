@@ -1,0 +1,18 @@
+$color-user-description: #b0a590;
+$size-user-description: clamp(0.9rem, 1.2vw + 0.8rem, 1.3rem);
+
+.header {
+  max-width: 80vw !important;
+}
+
+.about {
+  font-family: 'Roboto Mono', 'Ubuntu Mono';
+  max-width: 1000px;       // limits line length for readability
+  display: block;
+  margin: 3rem auto 0;    // centers content below header
+  line-height: 2.0;       // more comfortable for long text
+  font-weight: 400;
+  font-size: $size-user-description;
+  text-align: justify !important;
+  color: $color-user-description;
+}

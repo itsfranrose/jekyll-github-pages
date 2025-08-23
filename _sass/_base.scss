@@ -1,8 +1,6 @@
-@import 'normalize'; // fetchNormalize writes _scss/_normalize.scss before build
+@import 'normalize';
 
 :root {
-  --color-text: #555;
-  --color-heading: #333;
   --base-font-size: 100%; // respects user settings; typically 16px
   --base-line-height: 1.5;
   --scale-h1: 2.5rem;
@@ -35,16 +33,14 @@ body {
   line-height: var(--base-line-height);
   color: var(--color-text);
 
-  /* change this to whatever primary typeface your fonts.css provides */
-  font-family: 'Antic Slab', Georgia, "Times New Roman", serif;
+  font-family: 'Roboto', 'Averia Serif Libre';
   font-weight: 400;
   background: transparent;
 }
 
 main {
   flex: 1;
-
-  flex: 1;}
+}
 
 /* HTML5 elements default display (kept for older UA compatibility) */
 article, aside, figcaption, figure, footer, header, nav, section {
