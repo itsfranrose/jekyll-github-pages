@@ -3,7 +3,7 @@
 Live demo at [my github page](https://itsfranrose.github.io)
 
 <p align="center">
-  <img src="https://github.com/itsfranrose/jekyll-github-pages/blob/master/Screenshot.png" width="90%" />
+  <img src="https://github.com/itsfranrose/jekyll-github-pages/blob/master/Screenshot.jpg" width="90%" />
 </p>
 
 # Quick Setup
