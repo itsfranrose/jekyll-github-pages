@@ -1,5 +1,5 @@
 $color-user-description: #b0a590;
-$size-user-description: clamp(0.9rem, 1.2vw + 0.8rem, 1.3rem);
+$size-user-description: clamp(0.9rem, 0.2vw + 0.8rem, 1.3rem);
 
 .header {
   max-width: 80vw !important;
@@ -15,4 +15,7 @@ $size-user-description: clamp(0.9rem, 1.2vw + 0.8rem, 1.3rem);
   font-size: $size-user-description;
   text-align: justify !important;
   color: $color-user-description;
+  @media (max-width: #{$size-cut}) {
+    padding: 1vw;
+  }
 }

@@ -1,22 +1,25 @@
 $size-icon-extreme: 8rem;
 
 .under-construction {
-  margin-top: 13rem;
+  margin-top: clamp(4rem, 18vh, 13rem);
 
   i {
     color: $color-icon;
-    width: $size-icon-extreme;
-    height: $size-icon-extreme;
+    width: auto;
+    height: auto;
     background: transparent;
-    font-size: $size-icon-extreme;
-
+    font-size: clamp(3rem, 25vw, 8rem);
+    display: inline-block;
   }
 
   .description {
     color: $color-icon;
-    margin-top: 3rem;
-    font-size: 2.6rem;
+    margin-top: 1rem;
+    font-size: clamp(1rem, 6vw, 1.8rem);
     font-family: "Averia Serif Libre";
-    display: flex;
+    display: block;
+    line-height: 1.15;
+    text-align: center;
+    padding: 0 1rem;
   }
 }

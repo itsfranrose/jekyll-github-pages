@@ -4,11 +4,11 @@ $color-user-name: #949494;
 $color-user-title: $color-sec;
 $color-user-short-description: $color-sec;
 
-$size-user-username-prefix: clamp(0.1rem, 0.1vw + 1.0rem, 2.0rem);
-$size-user-username: clamp(1.0rem, 1.0vw + 2.9rem, 4.5rem);
-$size-user-name: clamp(0.1rem, 0.1vw + 1.0rem, 2.0rem);
+$size-user-username-prefix: clamp(0.1rem, 0.7vw + 0.5rem, 2.0rem);
+$size-user-username: clamp(1.0rem, 2.5vw + 1.7851rem, 4.5rem);
+$size-user-name: clamp(0.1rem, 0.7vw + 0.5rem, 2.0rem);
 $size-user-title: clamp(0.1rem, 0.6vw + 0.8rem, 1.5rem);
-$size-user-short-description: clamp(1rem, 1.6vw + 0.8rem, 1.5rem);
+$size-user-short-description: clamp(1rem, 1.9vw + 0.5rem, 1.5rem);
 
 /* Main header block */
 .intro {
@@ -16,12 +16,25 @@ $size-user-short-description: clamp(1rem, 1.6vw + 0.8rem, 1.5rem);
   color: #FFF;
   position: relative; /* stays in flow, allows z-indexing */
   z-index: 1;         /* sits above particle canvas (z-index:0) */
-  max-width: 900px;
+  max-width: min(92%, 900px);
   width: 100%;
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1rem;
   text-align: center;
-  white-space: nowrap;
-  margin-top: 7rem;
+  white-space: normal;
+  margin-top: clamp(2rem, 0.1vw + 5rem, 7rem); /* responsive spacing */
+
+  .user-username,
+  .user-username-prefix,
+  .user-name {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .title {
+    display: inline-flex;
+    align-items: flex-end;
+    gap: 0.5vw;
+  }
 
   .user-username-prefix {
     font-family: 'Averia Serif Libre';
@@ -32,7 +45,7 @@ $size-user-short-description: clamp(1rem, 1.6vw + 0.8rem, 1.5rem);
     /* fluid size: min 1.5rem, preferred with viewport, max 2.6rem */
     font-size: $size-user-username-prefix;
     /* small vertical tweak if you want it raised/lowered: */
-    transform: translateY(0.35rem);
+    transform: translateY(-0.45vw);
     vertical-align: baseline;        /* or text-top/text-bottom */
 
     &::before {
@@ -67,7 +80,7 @@ $size-user-short-description: clamp(1rem, 1.6vw + 0.8rem, 1.5rem);
     /* fluid size: min 1.5rem, preferred with viewport, max 2.6rem */
     font-size: $size-user-name;
     /* small vertical tweak if you want it raised/lowered: */
-    transform: translateY(0.35rem);
+    transform: translateY(-0.1vw);
     vertical-align: baseline;        /* or text-top/text-bottom */
 
     &::after {

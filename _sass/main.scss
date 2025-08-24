@@ -6,7 +6,6 @@
 @import 'links-grid';
 @import 'bg';
 @import 'footer';
-@import 'sidebar';
 @import 'about';
 @import 'under-construction';
 
@@ -15,8 +14,8 @@
   align-items: center;
   justify-content: center;
   color: $color-icon;
-  width: $size-icon-small;
-  height: $size-icon-small;
+  width: auto;
+  height: auto;
   font-size: $size-icon-small;
   padding: 1.15rem;   /* creates a comfortable touch target */
   margin: 0.1rem;
@@ -34,5 +33,11 @@
 
   &:active {
     transform: translateY(-1px) scale(0.99);
+  }
+
+  @media (min-width: #{$size-cut}) {
+    width: $size-icon-large;
+    height: $size-icon-large;
+    font-size: $size-icon-large;
   }
 }

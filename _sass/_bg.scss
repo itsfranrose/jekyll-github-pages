@@ -9,5 +9,11 @@
   background: $color-main;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
+
+  @media (min-width: 769px) {
+    background-attachment: fixed;
+  }
+  @media (max-width: 768px) {
+    background-attachment: scroll;
+  }
 }

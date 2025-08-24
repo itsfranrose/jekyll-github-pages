@@ -1,10 +1,10 @@
 $color-footer-quote: #fff;
-$size-footer-quote: clamp(0.1rem, 0.5vw + 0.4rem, 1.5rem);
+$size-footer-quote: clamp(0.85rem, 0.35vw + 0.8rem, 1.1rem);
 
 .footer {
   z-index: 1;
   padding: 5px 0;
-  margin-top: 0;
+  margin-top: 0.25vw;
   text-align: center;
 
   .footer-quote {
@@ -14,5 +14,8 @@ $size-footer-quote: clamp(0.1rem, 0.5vw + 0.4rem, 1.5rem);
     font-weight: 400;
     color: $color-footer-quote;
     font-size: $size-footer-quote;
+    @media (max-width: #{$size-cut}) {
+      padding: 1vw;
+    }
   }
 }

@@ -1,20 +1,30 @@
 .links-grid {
   display: grid;
-  transform: translateX(1.1rem);
-  margin-top: 1rem;
+  margin-top: 3.5vw;
   justify-content: center;
   align-items: center;
-  grid-template-columns: repeat(2, minmax(120px, 1fr));
+  grid-template-columns: repeat(2, minmax(65px, 1fr));
   gap: 1rem 2rem; /* vertical and horizontal spacing */
+  padding: 0 1rem;
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr; /* single column on very small screens */
+    gap: 0.75rem;
+    justify-items: stretch;
+  }
 
   .link-item {
     display: flex;
+    flex-direction: column;
     align-items: center;
     text-decoration: none;
     transition: color 0.2s, transform 0.2s;
 
+    @media (max-width: 480px) {
+      flex-direction: row;
+    }
+
     i {
-      margin-right: 0.6rem;
       color: $color-icon;
       width: $size-icon-small;
       height: $size-icon-small;
@@ -29,6 +39,9 @@
         height: $size-icon-large;
         font-size: $size-icon-large;
       }
+      @media (max-width: 480px) {
+        margin-right: 0.6rem
+      }
     }
 
     &:hover i,
@@ -41,10 +54,13 @@
     }
 
     .label {
-      font-size: $size-icon-text;
+      font-size: $size-icon-text-small;
       color: $color-icon;
       font-family: "Grenze Gotisch";
       display: inline-flex;
+      @media (min-width: #{$size-cut}) {
+        font-size: $size-icon-text-large;
+      }
     }
   }
 }
