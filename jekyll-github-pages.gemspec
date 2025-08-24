@@ -5,7 +5,7 @@ require_relative "lib/jekyll-github-pages/version"
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-github-pages"
   spec.version = Jekyll::GithubPages::VERSION
-  spec.required_ruby_version = ">= 3.1"
+  spec.required_ruby_version = ">= 3.3.6"
   spec.authors       = ["Francis Rosinante"]
   spec.email         = ["francis.rosinante@gmail.com"]
   spec.summary       = "This is a custom jekyll theme originally intended for my various github pages use"
@@ -27,6 +27,6 @@ Gem::Specification.new do |spec|
   end
 
   spec.add_runtime_dependency "jekyll", "~> 4.2"
-  spec.add_development_dependency "bundler", "~> 2.6.9"
-  spec.add_development_dependency "rake", "~> 13.3"
+  spec.add_development_dependency "bundler", "~> 2.7.1"
+  spec.add_development_dependency "rake", "~> 13.1.0"
 end

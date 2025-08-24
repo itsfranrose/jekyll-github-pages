@@ -36,6 +36,7 @@ $size-icon-text: 1.3rem;
       .link-item {
         display: flex;
         align-items: center;
+        white-space: nowrap;
         gap: 0.75rem;
         padding: 0.6rem 1rem;
         color: $color-icon;
@@ -78,6 +79,7 @@ $size-icon-text: 1.3rem;
       .link-item {
         display: flex;
         align-items: center;
+        white-space: nowrap;
         gap: 0.75rem;
         padding: 0.6rem 1rem;
         color: $color-icon;

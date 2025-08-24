@@ -5,6 +5,7 @@ node_modules
 _site/
 *.gem
 .bundle
+.bundle-cache
 .sass-cache
 Gemfile.lock
 package-lock.json
