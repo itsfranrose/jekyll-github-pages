@@ -21,3 +21,4 @@ footer:
   quote: 'Never give up without a fight. <span style="color: #857676;">&General Iroh</span>'
 
 theme: jekyll-github-pages
+theme-version: 0.1.11

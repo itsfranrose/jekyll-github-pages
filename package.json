@@ -1,6 +1,6 @@
 {
   "name": "jekyll-github-pages",
-  "version": "1.0.0",
+  "version": "0.1.11",
   "description": "This is a simple Jekyll theme for a minimal website.",
   "main": "index.js",
   "scripts": {
